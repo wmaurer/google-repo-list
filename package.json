@@ -1,0 +1,40 @@
+{
+  "name": "google-repo-list",
+  "version": "1.0.0",
+  "description": "Angular Typescript Webpack example for the Bärner JS Talks 16.09.2015",
+  "homepage": "https://github.com/wmaurer/google-repo-list",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmaurer/google-repo-list.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.5",
+    "angular-animate": "^1.4.5",
+    "angular-ui-router": "^0.2.15",
+    "bootstrap": "^3.3.5",
+    "marked": "^0.3.5"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^1.6.1",
+    "ng-annotate-webpack-plugin": "^0.1.2",
+    "ng-cache-loader": "0.0.13",
+    "ts-loader": "^0.5.4",
+    "typescript": "^1.6.0-beta",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.10.1",
+    "css-loader": "^0.18.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "lodash-node": "^3.10.1",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6"
+  }
+}

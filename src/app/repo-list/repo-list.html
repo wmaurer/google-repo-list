@@ -1,0 +1,26 @@
+<div class="repo-list">
+	<div class="repo-list-header">
+		<div class="container">
+			<h2>
+				google-repo-list
+			</h2>			
+		</div>
+	</div>
+	<div class="container repo-list-container">
+		<div class="page-navs">
+			<div class="pull-right">
+				<a ng-if="repoListCtrl.pageNavs['first'].pageNumber" ui-sref="repos({ pageNumber: repoListCtrl.pageNavs['first'].pageNumber })">first</a>&nbsp;
+				<a ng-if="repoListCtrl.pageNavs['prev'].pageNumber" ui-sref="repos({ pageNumber: repoListCtrl.pageNavs['prev'].pageNumber })">prev</a><span ng-if="repoListCtrl.pageNavs['next'].pageNumber">&nbsp;</span>			
+				<a ng-if="repoListCtrl.pageNavs['next'].pageNumber" ui-sref="repos({ pageNumber: repoListCtrl.pageNavs['next'].pageNumber })">next</a><span ng-if="repoListCtrl.pageNavs['last'].pageNumber">&nbsp;</span>			
+				<a ng-if="repoListCtrl.pageNavs['last'].pageNumber" ui-sref="repos({ pageNumber: repoListCtrl.pageNavs['last'].pageNumber })">last</a>			
+			</div>
+		</div>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="repo in repoListCtrl.repos">
+				<a ui-sref="{{repo.uiSref}}">
+					{{repo.name}}: {{repo.description}}
+				</a>
+			</li>
+		</ul>		
+	</div>
+</div>

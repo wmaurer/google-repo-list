@@ -1,0 +1,75 @@
+.repo-list {
+	width: 100%;
+	h2 {
+		margin: 15px 0;
+	}
+	.repo-list-header {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 100;
+		background-color: #ddd;
+	}
+	.repo-list-container {
+		margin-top: 80px;
+	}
+	.page-navs {
+		height: 30px;
+	}
+}
+
+.repo-detail {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 101;
+	padding: 10px;
+	height: 100vh;
+	background-color: white;
+	.repo-detail-container {
+		background-color: white;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		height: 100%;
+		overflow-y: scroll;
+	}
+	.close-btn {
+		margin: 15px 0;
+	}
+	.github-url {
+		margin-top: 25px;
+		float: right;
+	}
+}
+
+repo-detail {
+	.repo-detail {
+		animation: 0.4s flyIn;
+	}
+	&.ng-hide {
+		transition: display 0.4s;
+		.repo-detail {
+			animation: 0.4s flyOut;
+		}		
+	}
+	&.ng-hide-add, &.ng-hide-remove {		
+		display: block !important;
+	}
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes flyOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

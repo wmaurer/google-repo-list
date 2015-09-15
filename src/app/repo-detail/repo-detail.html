@@ -1,0 +1,8 @@
+<div class="repo-detail" ng-show="repoDetailCtrl.repo">
+	<div class="container repo-detail-container">
+		<a class="btn btn-default close-btn" ui-sref="repos"><span class="glyphicon glyphicon-menu-left"></span></a>
+		<a class="github-url" target="_blank" href="{{repoDetailCtrl.repo.htmlUrl}}">{{repoDetailCtrl.repo.htmlUrl}}</a>
+		<marked ng-model="repoDetailCtrl.repo.readmeMarkdown" ng-if="repoDetailCtrl.repo.readmeMarkdown"></marked>
+		<p ng-if="!repoDetailCtrl.repo.readmeMarkdown">No README.md for repo {{repoDetailCtrl.repo.fullName}}</p>
+	</div>
+</div>
